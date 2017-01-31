@@ -1,0 +1,10 @@
+<ul class="pagination">
+  <li *ngFor="let page of pagesArray; let i = index"
+      [ngClass]="{active: i + 1 === currentPage}"
+      class="active">
+    <a (click)="onPageClick($event, i + 1)"
+       href="">
+      {{i + 1}}
+    </a>
+  </li>
+</ul>

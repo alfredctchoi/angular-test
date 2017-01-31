@@ -1,0 +1,11 @@
+<ul class="list-unstyled">
+  <li *ngFor="let user of users">
+    <a class="text-capitalize" rou>{{user.firstName}} {{user.lastName}}</a>
+  </li>
+</ul>
+
+<paging *ngIf="userPaging"
+        (onPage)="handlePage($event)"
+        [currentPage]="userPaging.page"
+        [totalPages]="userPaging.totalPages">
+</paging>
